@@ -10,11 +10,7 @@ import (
 	"gonum.org/v1/plot/vg"
 )
 
-func main() {
-	prob3()
-}
-
-func probTeste() {
+func prob1() {
 	N := 50  //num de divisoes
 	L := 1.0 //tamanho da barra
 	numIteracoes := 10000
@@ -23,7 +19,11 @@ func probTeste() {
 	numGraficos := 30
 
 	temps := make([]float64, N)
-	temps[N-1] = 1
+	for i := 1; i < N-1; i++ {
+		temps[i] = 1.0
+	}
+	temps[0] = 0
+	temps[N-1] = 0
 
 	tempsNovas := make([]float64, N)
 	copy(tempsNovas, temps)
@@ -61,7 +61,7 @@ func probTeste() {
 		p.Add(line)
 
 		if k%(numIteracoes/numGraficos) == 0 || k < 50 && k%5 == 0 {
-			if err := p.Save(6*vg.Inch, 4*vg.Inch, fmt.Sprintf("temps%v.png", k)); err != nil {
+			if err := p.Save(6*vg.Inch, 4*vg.Inch, fmt.Sprintf("prob1_%v.png", k)); err != nil {
 				log.Fatalf("Save: %v", err)
 			}
 		}
