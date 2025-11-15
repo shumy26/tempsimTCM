@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	prob3()
+	prob1()
 }
 
 func probTeste() {
@@ -51,6 +51,7 @@ func probTeste() {
 
 		xPad := 0.03 * L
 		p.X.Max = L + xPad
+		p.Y.Max = 1.0
 
 		line, err := plotter.NewLine(pts)
 		if err != nil {
