@@ -54,7 +54,7 @@ func main() {
 		p.Add(line)
 		p.Legend.Add("temp", line)
 
-		if k%(numIteracoes/numGraficos) == 0 || k < 50 && k%5 == 1 {
+		if k%(numIteracoes/numGraficos) == 0 || k < 50 && k%5 == 0 {
 			if err := p.Save(6*vg.Inch, 4*vg.Inch, fmt.Sprintf("temps%v.png", k)); err != nil {
 				log.Fatalf("Save: %v", err)
 			}
