@@ -42,8 +42,8 @@ func prob2() {
 		p := plot.New()
 
 		p.Title.Text = fmt.Sprintf("t = %v", float64(k)*dt)
-		p.X.Label.Text = "X"
-		p.Y.Label.Text = "T"
+		p.X.Label.Text = "X (m)"
+		p.Y.Label.Text = "T (°C)"
 
 		xPad := 0.03 * L
 		p.X.Max = L + xPad
