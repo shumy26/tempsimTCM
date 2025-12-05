@@ -12,7 +12,7 @@ import (
 )
 
 func prob3() {
-	N := 50  //num de divisoes
+	N := 10  //num de divisoes
 	L := 2.0 //tamanho da barra
 	numIteracoes := 10000
 	dx := L / float64(N)
@@ -62,7 +62,7 @@ func prob3() {
 		line.Color = plotutil.Color(0)
 		p.Add(line)
 
-		if k%(numIteracoes/numGraficos) == 0 || k < 50 && k%5 == 0 {
+		if k%(numIteracoes/numGraficos) == 0 || k < 1000 && k%5 == 0 {
 			if err := p.Save(6*vg.Inch, 4*vg.Inch, fmt.Sprintf("prob3_%v.png", k)); err != nil {
 				log.Fatalf("Save: %v", err)
 			}

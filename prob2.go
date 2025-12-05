@@ -57,7 +57,7 @@ func prob2() {
 		line.Color = plotutil.Color(0)
 		p.Add(line)
 
-		if k%(numIteracoes/numGraficos) == 0 || k < 50 && k%5 == 0 {
+		if k%(numIteracoes/numGraficos) == 0 || k < 1000 && k%5 == 0 {
 			if err := p.Save(6*vg.Inch, 4*vg.Inch, fmt.Sprintf("prob2_%v.png", k)); err != nil {
 				log.Fatalf("Save: %v", err)
 			}
